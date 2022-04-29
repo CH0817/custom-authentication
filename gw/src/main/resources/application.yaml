@@ -1,0 +1,22 @@
+server:
+  port: 8300
+spring:
+  cloud:
+    gateway:
+      default-filters:
+        - DedupeResponseHeader=Access-Control-Allow-Origin Access-Control-Allow-Credentials
+      routes:
+        - id: euisbq_route
+          uri: http://localhost:8787/euisbq
+          predicates:
+            - Path=/euisbq/**
+        - id: euisb_route
+          uri: http://localhost:8888/euisb
+          predicates:
+            - Path=/euisb/**
+logging:
+  level:
+    org:
+      springframework:
+        cloud:
+          gateway: trace

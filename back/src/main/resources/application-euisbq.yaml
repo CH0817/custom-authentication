@@ -1,0 +1,4 @@
+server:
+  servlet:
+    context-path: /euisbq
+  port: 8787

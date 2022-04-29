@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Fake Frontend</title>
+    <script th:src="@{/webjars/jquery/3.6.0/jquery.min.js}"></script>
+    <script th:src="@{/webjars/jquery.cookie/1.4.1/jquery.cookie.js}"></script>
+    <script th:src="@{/index.js}"></script>
+</head>
+<body>
+<div>
+    <button onclick="getBackUserProfile()">get back user profile</button>
+</div>
+<div>
+    <button onclick="getBack2UserProfile()">get back2 user profile</button>
+</div>
+<div>
+    <button onclick="redirectRequestEuisbq()">透過GW請求EUISBQ</button>
+</div>
+<div id="backUserProfile1">
+
+</div>
+<hr>
+<div id="backUserProfile2">
+
+</div>
+<div id="public">
+
+</div>
+<div>
+    <a href="http://localhost:8300/euisbq/logout">logout</a>
+</div>
+<div id="responseBody"></div>
+</body>
+</html>

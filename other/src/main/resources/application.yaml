@@ -1,0 +1,7 @@
+server:
+  servlet:
+    context-path: /other
+  port: 8877
+spring:
+  thymeleaf:
+    cache: false
